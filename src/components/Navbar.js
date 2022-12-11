@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   let mode = "primary";
@@ -8,16 +9,16 @@ export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-sm bg-${mode} navbar-dark`}>
       {/* Brand */}
-      <a className="navbar-brand" href="/">
+      <Link className="navbar-brand" to="/">
         {props.title}
-      </a>
+      </Link>
 
       {/* Links  */}
       <ul className="navbar-nav">
         <li className="nav-item">
-          <a className="nav-link" href="/">
-            Link 1
-          </a>
+          <Link className="nav-link" to="/about">
+            About
+          </Link>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/">
